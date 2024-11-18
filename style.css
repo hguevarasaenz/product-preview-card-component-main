@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;    
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 100vh;
+    font-family: 'Montserrat', 'Fraunces';
+    display: grid;
+    grid-template-rows:  1fr auto;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.s-product{
+    margin: auto 0;
+}
+
+
+.container-product{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width: 40%;
+    margin: 0 auto;
+    /* gap: 24px; */
+    background-color: white;
+    border-radius: 8px;
+}
+
+.product-description{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* place-items: center; */
+    padding: 24px;
+    align-items: center;
+    gap: 8px;
+}
+
+
+p{
+    font-size: 18px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+
+h2{
+    font-family: 'Fraunces';
+    font-size: 48px;
+    color: hsl(212, 21%, 14%);
+}
+
+
+.perfume{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+.img-div{
+    background-image: url('./images/image-product-desktop.jpg');
+    height: 100%;
+    width: 100%;
+    /* object-fit: contain; */
+    background-size: cover;
+    /* overflow: hidden; */
+    border-radius: 8px 0 0 8px;
+    /* Ajusta solo las esquinas necesarias */
+}
+
+
+.precios{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.precio-descuento{
+    font-family: 'Fraunces';
+    font-size: 48px;
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+}
+
+.precio{
+    text-decoration: line-through;
+}
+
+.add-to-cart{
+    width: 100%;
+    height: 100%;
+    background-color: hsl(159, 56%, 17%);
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    padding: 12px 20px;
+    /* outline: none; */
+    border-radius: 8px;
+    border: 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+    .container-product{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 3fr;
+        transition: 0.2s;
+        width: 45%;
+    }
+
+    .img-div{
+        background-image: url('images/image-product-mobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 8px 8px 0 0;
+        transition: 0.1s;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .container-product {
+        width: 60%;
+        transition: 0.2s;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .container-product {
+        width: 70%;
+        transition: 0.2s;
+    }
+
+}
+
+@media (max-width: 475px) {
+    .container-product {
+        width: 90%;
+        transition: 0.2s;
+    }
+
+}
+@media (max-width: 375ppx) {
+    .container-product {
+        width: 100%;
+        transition: 0.2s;
+    }
+
+}
+
+
+footer{
+    margin-top: 16px;
+}
